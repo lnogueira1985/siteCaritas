@@ -1,0 +1,287 @@
+html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Cáritas - Cáritas Sagrada Família</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/a-caritas.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logoCaritas.png" alt="Logo Cáritas Sagrada Família">
+                </a>
+                <h1 class="sub-title">Cáritas Sagrada Família</h1>
+            </div>
+            <nav>
+                <ul id="main-nav">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="a-caritas.html" class="active">A Cáritas</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-menu" class="hamburger-icon" aria-label="Abrir menu de navegação">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="page-banner">
+        <div class="container">
+            <h1>Sobre a Cáritas Sagrada Família</h1>
+            <p>Conheça nossa missão, história e valores que nos guiam.</p>
+        </div>
+    </section>
+    <main>
+        <section id="about-caritas" class="main-content-section">
+            <div class="container">
+                <h2>SOBRE A CÁRITAS SAGRADA FAMÍLIA</h2> 
+                <p>A Cáritas Sagrada Família é uma organização de caridade que atua na promoção humana, defesa de direitos e transformação social. Fundada com os valores da solidariedade e do amor ao próximo, nossa missão é construir um mundo mais justo e fraterno, onde todos tenham dignidade e oportunidades.</p>
+                
+                <h3>Nossa Missão</h3>
+                <p>Inspirados pelos princípios da Doutrina Social da Igreja Católica, trabalhamos incansavelmente para enfrentar as causas da pobreza e da exclusão social. Através de projetos e ações concretas, buscamos promover a dignidade humana, fortalecer os laços comunitários e incentivar a autonomia das pessoas em situação de vulnerabilidade.</p>
+
+                <h3>Nossos Valores</h3>
+                <ul>
+                    <li><strong>Solidariedade:</strong> Acreditamos que a ajuda mútua e o apoio são fundamentais para superar desafios.</li>
+                    <li><strong>Justiça Social:</strong> Comprometemo-nos a lutar por um mundo onde todos tenham acesso a direitos básicos e oportunidades.</li>
+                    <li><strong>Fraternidade:</strong> Valorizamos a construção de relações de respeito, diálogo e cooperação.</li>
+                    <li><strong>Esperança:</strong> Semear a esperança e acreditar no potencial de transformação de cada indivíduo e comunidade.</li>
+                </ul>
+
+                <h3>Nossa História</h3>
+                <p>Desde a nossa fundação em [ANO DE FUNDAÇÃO], a Cáritas Sagrada Família tem sido um farol de esperança para muitas famílias e indivíduos. Começamos com [BREVE INFORMAÇÃO SOBRE O INÍCIO, ex: pequenas ações de distribuição de alimentos] e crescemos para abranger [AREAS DE ATUAÇÃO ATUAIS, ex: projetos de educação, capacitação profissional e apoio psicossocial].</p>
+                <p>Nossa jornada é marcada pela dedicação de voluntários, o apoio de parceiros e a confiança das comunidades que servimos. Cada passo que damos é um testemunho do poder da ação coletiva e do compromisso com a vida.</p>
+                
+                <h3>Chamada à Ação</h3>
+                <p>Convidamos você a fazer parte dessa rede de solidariedade. Seja um voluntário, um doador ou um parceiro. Juntos, podemos ir além e construir um futuro mais digno para todos.</p>
+                <a href="#" class="btn-primary">Como Ajudar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span class="footer-brand">lcmn1985</span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/style.js"></script>
+
+</body>
+</html>
+
+
+css
+
+/* assets/css/a-caritas.css */
+
+/* -------------------------------------- */
+/* Page Banner for A Cáritas */
+/* -------------------------------------- */
+#page-banner {
+    /* Altere 'a-caritas-banner.jpg' para o caminho da sua imagem de banner. */
+    /* Crie uma imagem com boa resolução e foco central para esse banner. */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/a-caritas-banner.jpg') no-repeat center center/cover;
+    color: var(--white);
+    padding: 80px 0; /* Mais padding para um visual mais imponente */
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+}
+
+#page-banner h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--white); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra suave para o texto */
+}
+
+#page-banner p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* -------------------------------------- */
+/* Estilos específicos para a seção "SOBRE A CÁRITAS" */
+/* -------------------------------------- */
+#about-caritas {
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+    background-color: var(--white); /* Fundo branco para a seção */
+    border-radius: 8px; 
+    box-shadow: var(--box-shadow); /* Sombra suave */
+    margin: -50px auto 40px auto; /* Centraliza, adiciona margem externa e SOBE a seção (para sobrepor o banner) */
+    max-width: 900px; 
+    text-align: left; 
+    position: relative; /* Necessário para o z-index */
+    z-index: 2; /* Garante que esta seção fique acima do banner */
+}
+
+#about-caritas h2 {
+    color: var(--caritas-red); 
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center; 
+    position: relative;
+    padding-bottom: 15px; 
+}
+
+#about-caritas h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; 
+    height: 4px; 
+    background-color: var(--caritas-red);
+    border-radius: 2px;
+}
+
+#about-caritas h3 {
+    color: var(--primary-color); 
+    font-size: 1.8em;
+    margin-top: 40px; /* Mais espaçamento acima dos subtítulos */
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color); 
+    padding-left: 15px;
+    font-weight: 700; /* Deixa o subtítulo mais forte */
+}
+
+#about-caritas p {
+    font-size: 1.1em;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#about-caritas ul {
+    list-style: none; 
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#about-caritas ul li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 30px; 
+    position: relative;
+    color: var(--text-color);
+}
+
+#about-caritas ul li strong { 
+    color: var(--caritas-red); 
+}
+
+#about-caritas ul li::before {
+    content: '\2713'; 
+    color: var(--secondary-color); 
+    font-weight: 900; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.8; 
+}
+
+/* Estilo para o botão de "Como Ajudar" */
+#about-caritas .btn-primary {
+    margin-top: 30px;
+    display: inline-block; 
+}
+
+/* -------------------------------------- */
+/* Responsividade para a página "A Cáritas" */
+/* -------------------------------------- */
+@media (max-width: 992px) {
+    #page-banner {
+        padding: 60px 0;
+    }
+    #page-banner h1 {
+        font-size: 2.8em;
+    }
+    #page-banner p {
+        font-size: 1.1em;
+    }
+    #about-caritas {
+        margin-top: -30px; /* Ajusta a sobreposição em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    #page-banner {
+        padding: 50px 0;
+    }
+    #page-banner h1 {
+        font-size: 2.2em;
+    }
+    #page-banner p {
+        font-size: 1em;
+    }
+    #about-caritas {
+        padding: 40px 20px;
+        margin: 20px auto; /* Remove a sobreposição em telas muito pequenas */
+    }
+    #about-caritas h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    #about-caritas h2::after {
+        width: 60px;
+        height: 3px;
+    }
+    #about-caritas h3 {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+    #about-caritas p, #about-caritas ul li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-banner h1 {
+        font-size: 1.8em;
+    }
+    #page-banner p {
+        font-size: 0.9em;
+    }
+    #about-caritas {
+        padding: 30px 15px;
+        margin: 15px auto;
+    }
+    #about-caritas h2 {
+        font-size: 1.8em;
+    }
+    #about-caritas h3 {
+        font-size: 1.3em;
+    }
+    #about-caritas p, #about-caritas ul li {
+        font-size: 0.95em;
+    }
+}

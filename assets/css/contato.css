@@ -1,0 +1,195 @@
+/* assets/css/contato.css */
+
+/* -------------------------------------- */
+/* Page Banner para Contato */
+/* -------------------------------------- */
+#page-banner-contato {
+    background-color: var(--caritas-red);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-banner-contato h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#page-banner-contato p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* -------------------------------------- */
+/* Seção de Canais de Contato (Cards) */
+/* -------------------------------------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.contact-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.contact-card .btn-primary {
+    margin-top: auto;
+    display: inline-block;
+}
+
+/* -------------------------------------- */
+/* Seção de FAQ (Perguntas Frequentes) */
+/* -------------------------------------- */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5em;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 15px 20px;
+}
+
+/* -------------------------------------- */
+/* Responsividade para Contato */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+    #page-banner-contato h1 {
+        font-size: 2.8em;
+    }
+    #page-banner-contato p {
+        font-size: 1.1em;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Regras do formulário REMOVIDAS aqui */
+    /* .contact-form { padding: 20px; } */
+    /* .form-group label { font-size: 0.9em; } */
+    /* .form-group input, .form-group textarea { padding: 10px; font-size: 0.9em; } */
+    /* .contact-form button[type="submit"] { font-size: 1em; padding: 12px 20px; } */
+
+    .accordion-header {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+    .accordion-content p {
+        font-size: 0.9em;
+        padding-bottom: 10px;
+    }
+    .accordion-content.active {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-banner-contato h1 {
+        font-size: 2.2em;
+    }
+    #page-banner-contato p {
+        font-size: 0.9em;
+    }
+    .contact-card {
+        padding: 20px;
+    }
+    .contact-card h3 {
+        font-size: 1.5em;
+    }
+}

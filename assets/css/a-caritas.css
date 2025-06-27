@@ -1,0 +1,339 @@
+/* assets/css/a-caritas.css */
+
+/* -------------------------------------- */
+/* Page Banner for A Cáritas (Cor de fundo vermelha e altura total) */
+/* -------------------------------------- */
+#page-banner {
+    background-color: var(--caritas-red); /* Cor de fundo vermelha, como a home */
+    color: var(--white);
+    padding: 80px 0; 
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+
+    /* Propriedades para altura total da viewport e centralização de conteúdo */
+    height: 85vh; /* Faz o banner ocupar 85% da altura da viewport */
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Coloca os itens (parágrafos e h1) em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo dentro do banner */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+#page-banner .intro-paragraph {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 30px auto; 
+    color: var(--white);
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+#page-banner h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--white); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+#page-banner p:not(.intro-paragraph) { 
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* -------------------------------------- */
+/* Estilos para as Novas Seções de Conteúdo (Duas Colunas) */
+/* -------------------------------------- */
+.about-item {
+    padding: 60px 0; /* Padding padrão para cada seção */
+    border-bottom: 1px solid var(--border-color); /* Linha divisória suave */
+}
+
+.about-item:last-of-type {
+    border-bottom: none; /* Remove a borda da última seção */
+}
+
+.section-alt-bg {
+    background-color: var(--light-bg); 
+}
+
+.about-item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
+    gap: 40px; /* Espaçamento entre as colunas */
+    align-items: center; /* Centraliza verticalmente o conteúdo das colunas */
+    max-width: 1000px; /* Limita a largura do grid */
+    margin: 0 auto;
+}
+
+/* Ordem padrão: Conteúdo à esquerda, Título à direita */
+.about-item-grid .about-item-content {
+    grid-column: 1 / 2;
+    text-align: left;
+}
+.about-item-grid .about-item-title-col {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end; /* Alinha o título vertical à direita */
+    align-items: center;
+    padding: 20px; /* Padding interno para a coluna do título */
+}
+
+/* Ordem reversa: Título à esquerda, Conteúdo à direita */
+.about-item-grid.reversed .about-item-content {
+    grid-column: 2 / 3;
+}
+.about-item-grid.reversed .about-item-title-col {
+    grid-column: 1 / 2;
+    justify-content: flex-start; /* Alinha o título vertical à esquerda */
+}
+
+/* Estilo do título vertical (o "tema") */
+.vertical-title {
+    font-size: 4em; 
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.08); 
+    text-transform: uppercase;
+    white-space: nowrap; 
+    transform: rotate(90deg); 
+    transform-origin: center; 
+    position: relative;
+    right: -20px; 
+    letter-spacing: 0.1em;
+}
+
+/* Ajuste para o título vertical na ordem reversa */
+.about-item-grid.reversed .vertical-title {
+    left: -20px; 
+    right: auto;
+}
+
+/* Estilos de h3 (títulos de cada seção) */
+.about-item-content h3 {
+    color: var(--primary-color); 
+    font-size: 2.2em;
+    margin-top: 0; 
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-item-content h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; 
+    height: 3px; 
+    background-color: var(--caritas-red); 
+    border-radius: 2px;
+}
+
+/* Estilos de parágrafos dentro das seções */
+.about-item-content p {
+    font-size: 1.1em;
+    line-height: 1.8; 
+    margin-bottom: 20px;
+    color: var(--light-text-color); 
+}
+
+/* Estilos de lista dentro das seções (Nossos Valores) */
+.about-item-content ul {
+    list-style: none; 
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-item-content ul li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 30px; 
+    position: relative;
+    color: var(--light-text-color);
+}
+
+.about-item-content ul li strong { 
+    color: var(--caritas-red); 
+}
+
+.about-item-content ul li::before {
+    content: '\2713'; 
+    color: var(--secondary-color); 
+    font-weight: 900; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.8; 
+}
+
+/* Estilo para o botão "Como Ajudar" */
+.about-item-content .btn-primary {
+    margin-top: 30px;
+    display: inline-block; 
+}
+
+/* -------------------------------------- */
+/* Animações de Scroll para as Seções */
+/* -------------------------------------- */
+.about-item {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(50px); /* Deslocado 50px para baixo por padrão */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform; /* Otimização para performance */
+}
+
+.about-item.animated {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+/* Animação específica para seções com título à direita (slide da direita) */
+#mission-section.animated,
+#history-section.animated {
+    transform: translateX(0) translateY(0); /* Finaliza na posição original (vem da direita) */
+    /* Para realmente vir da direita, o estado inicial sem .animated deveria ter translateX */
+    /* Mas o translateY já dá um bom efeito geral. Podemos refinar se necessário */
+}
+
+/* Animação específica para seções com título à esquerda (slide da esquerda) */
+#values-section.animated,
+#cta-section.animated {
+    transform: translateX(0) translateY(0); /* Finaliza na posição original (vem da esquerda) */
+}
+
+/* Para um efeito mais pronunciado de "vir do lado" */
+/* Adicione estas regras para os estados INICIAIS, quando não há a classe 'animated' */
+#mission-section, #history-section {
+    transform: translateX(100px); /* Começa 100px à direita, escondido */
+}
+#values-section, #cta-section {
+    transform: translateX(-100px); /* Começa 100px à esquerda, escondido */
+}
+
+/* Quando .animated é adicionado, ele volta para translateX(0) */
+.about-item.animated {
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* Zera todas as transformações */
+}
+
+
+/* -------------------------------------- */
+/* Responsividade para a página "A Cáritas" */
+/* -------------------------------------- */
+@media (max-width: 992px) {
+    #page-banner {
+        padding: 60px 0;
+    }
+    #page-banner .intro-paragraph {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    #page-banner h1 {
+        font-size: 2.8em;
+    }
+    #page-banner p:not(.intro-paragraph) {
+        font-size: 1.1em;
+    }
+
+    .about-item {
+        padding: 40px 0;
+    }
+    .about-item-grid {
+        grid-template-columns: 1fr; /* Empilha as colunas em telas menores */
+        gap: 30px;
+    }
+    .about-item-grid .about-item-content,
+    .about-item-grid .about-item-title-col,
+    .about-item-grid.reversed .about-item-content,
+    .about-item-grid.reversed .about-item-title-col {
+        grid-column: 1 / -1; /* Ocupa a largura total */
+    }
+    /* Ajuste de ordem para quando empilhado */
+    .about-item-grid .about-item-title-col { order: -1; } /* Coloca o título antes do conteúdo */
+    .about-item-grid.reversed .about-item-title-col { order: -1; } /* Mantém a ordem */
+
+
+    .about-item-grid .about-item-title-col,
+    .about-item-grid.reversed .about-item-title-col {
+        justify-content: center; /* Centraliza o título vertical quando empilhado */
+        padding: 10px 0;
+    }
+
+    .vertical-title {
+        transform: rotate(0deg); /* Remove a rotação */
+        right: auto;
+        left: auto;
+        font-size: 3em; /* Reduz o tamanho */
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo do título grande */
+    }
+
+    .about-item-content h3 {
+        font-size: 1.8em;
+        text-align: center; /* Centraliza o h3 quando empilhado */
+    }
+    .about-item-content h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza a linha abaixo do h3 */
+    }
+    .about-item-content p, .about-item-content ul li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    #page-banner {
+        padding: 50px 0;
+    }
+    #page-banner h1 {
+        font-size: 2.2em;
+    }
+    #page-banner p:not(.intro-paragraph) {
+        font-size: 1em;
+    }
+    #page-banner .intro-paragraph {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .about-item {
+        padding: 30px 0;
+    }
+    .vertical-title {
+        font-size: 2.5em;
+    }
+    .about-item-content h3 {
+        font-size: 1.5em;
+    }
+    .about-item-content p, .about-item-content ul li {
+        font-size: 0.95em;
+    }
+    .about-item-content .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-banner h1 {
+        font-size: 1.8em;
+    }
+    #page-banner p:not(.intro-paragraph) {
+        font-size: 0.9em;
+    }
+    #page-banner .intro-paragraph {
+        font-size: 0.9em;
+    }
+    .vertical-title {
+        font-size: 2em;
+    }
+    .about-item-content h3 {
+        font-size: 1.3em;
+    }
+}
