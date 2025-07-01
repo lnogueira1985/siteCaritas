@@ -138,6 +138,7 @@
     line-height: 1.8; 
     margin-bottom: 20px;
     color: var(--light-text-color); 
+    text-align: justify;
 }
 
 /* Estilos de lista dentro das seções (Nossos Valores) */
@@ -155,6 +156,7 @@
     padding-left: 30px; 
     position: relative;
     color: var(--light-text-color);
+    text-align: justify;
 }
 
 .about-item-content ul li strong { 
